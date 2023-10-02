@@ -8,9 +8,6 @@
 				@can('role-list')
 					<a class="list-group-item list-group-item-action list-group-item-primary p-3" href="{{ route('roles.index') }}"><i class="fa fa-users-cog"></i> Roles</a>
 				@endcan
-				@can('product-list')
-					<a class="list-group-item list-group-item-action list-group-item-primary p-3" href="{{ route('products.index') }}"><i class="fa fa-store"></i> Productos</a>
-				@endcan
 				@can('paciente-list')
 					<a class="list-group-item list-group-item-action list-group-item-primary p-3" href="{{ route('pacientes.index') }}"><i class="fa fa-hospital-user"></i> Pacientes</a>
 				@endcan

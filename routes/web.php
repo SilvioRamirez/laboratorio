@@ -12,6 +12,10 @@ use App\Http\Controllers\BioanalistaController;
 use App\Http\Controllers\ConfiguracionController;
 use App\Http\Controllers\ExamenController;
 use App\Http\Controllers\MuestraController;
+use Illuminate\Support\Facades\URL;
+
+
+URL::forceScheme('https');
 
 /*
 |--------------------------------------------------------------------------
