@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
 
         view()->share('configOrganizacion', $configuracion = Configuracion::find(1));
 
-        URL::forceScheme('https');
+        /* URL::forceScheme('https'); */
 
         Paginator::useBootstrap();
     }

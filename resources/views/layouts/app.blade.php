@@ -30,8 +30,7 @@
 
                 <main class="container-fluid">
                     <div class="pt-4">
-                        @yield('content')                        
-
+                        @yield('content')
                     </div>
                 </main>
 
