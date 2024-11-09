@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BioanalistaController;
@@ -32,7 +33,10 @@ Route::get('/', function () {
     return view('landing.index');
 });
 
-Auth::routes();
+// Login and Logout Routes...
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [LoginController::class,'login']);
+Route::post('logout',  [LoginController::class,'logout'])->name('logout');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
