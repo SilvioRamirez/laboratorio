@@ -17,7 +17,7 @@
     @googlefonts
     
     {{-- Loads IBM Plex Mono --}}
-    @googlefonts('code')
+    {{-- @googlefonts('code') --}}
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
