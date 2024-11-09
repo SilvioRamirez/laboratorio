@@ -15,7 +15,7 @@ use App\Http\Controllers\MuestraController;
 use Illuminate\Support\Facades\URL;
 
 
-URL::forceScheme('https');
+/* URL::forceScheme('https'); */
 
 /*
 |--------------------------------------------------------------------------

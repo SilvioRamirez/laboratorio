@@ -13,7 +13,7 @@ class Paciente extends Model
     protected $guarded = [];
 
     static $rules= [
-        'cedula' => 'required|unique:pacientes',
+        'cedula' => 'required',
         'nombres' => 'required',
         'apellidos' => 'required',
         'fecha_nacimiento' => 'required',
@@ -37,17 +37,17 @@ class Paciente extends Model
 
     public function getCreatedAtAttribute()
     {
-        return \Carbon\Carbon::parse($this->attributes['created_at'])->format('d-m-Y');
+        return \Carbon\Carbon::parse($this->attributes['created_at'])->format('Y-m-d h:m:s');
     }
 
     public function getUpdatedAtAttribute()
     {
-        return \Carbon\Carbon::parse($this->attributes['updated_at'])->format('d-m-Y');
+        return \Carbon\Carbon::parse($this->attributes['updated_at'])->format('Y-m-d h:m:s');
     }
 
     public function getFechaNacimientoAttribute()
     {
-        return \Carbon\Carbon::parse($this->attributes['fecha_nacimiento'])->format('d-m-Y');
+        return \Carbon\Carbon::parse($this->attributes['updated_at'])->format('Y-m-d');
     }
 
     /* public function getAgeAttribute()

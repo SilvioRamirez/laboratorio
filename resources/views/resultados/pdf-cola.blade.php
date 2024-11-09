@@ -150,10 +150,10 @@
             <div class="{{ $index == 0 ? 'page-break-auto' : 'page-break-auto'}}">
     
                 <div class="text-center margint-top-10">
-                    <strong>{{ $resultado->examen->nombre }} {{ $index }}</strong>
+                    <strong>{{ $resultado->examen->nombre }} {{-- {{ $index }} --}}</strong>
                 </div>
     
-                <div class="text-center  margint-bottom-10">
+                <div class="text-center margint-bottom-10">
                     <strong>MUESTRA: </strong>{{ $resultado->muestra->nombre }}     <strong>FECHA: </strong>{{ $resultado->examen->created_at }}
                 </div>
                 
@@ -164,10 +164,10 @@
                         @if($resultado->examen->unidad == 1)
                             <th class="text-center table-border">Unidad de Medida</th>
                         @endif
-                        @if($resultado->ref_inferior == 1)
+                        @if($resultado->examen->ref_inferior == 1)
                             <th class="text-center table-border">Ref. Inferior</th>
                         @endif
-                        @if($resultado->ref_superior == 1)
+                        @if($resultado->examen->ref_superior == 1)
                             <th class="text-center table-border">Ref. Superior</th>
                         @endif
                     </thead>

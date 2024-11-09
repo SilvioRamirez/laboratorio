@@ -81,7 +81,7 @@ class UsersDataTable extends DataTable
             Column::make('name')->title('Nombre y Apellido')->data('name')->name('name'),
             Column::make('email')->title('Correo'),
             Column::computed('role')->title('Roles')
-                        ->width(60),
+                    ->width(60),
             Column::make('created_at')->title('Creado'),
             Column::make('updated_at')->title('Actualizado'),
             Column::computed('action')->title('Acción')

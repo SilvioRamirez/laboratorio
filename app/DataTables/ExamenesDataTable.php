@@ -26,8 +26,13 @@ class ExamenesDataTable extends DataTable
                 return '<div class="btn-group" role="group" aria-label="Opciones">
                             <a class="btn btn-info btn-sm"     title="Ver Examen" href="'.route('examenes.show',$query->id).'"><i class="fa fa-eye"></i></a>
                             <a class="btn btn-primary btn-sm"  title="Editar Examen" href="'.route('examenes.edit',$query->id).'"><i class="fa fa-pen-to-square"></i></a>            
-                            <a class="btn btn-success btn-sm" title="Editar Caracteristicas del Examen" href="'.route('examenes.caracteristicas',$query->id).'"><i class="fa fa-notes-medical"></i></a>
                             <a class="btn btn-danger btn-sm" title="Eliminar Caracteristicas del Examen" href="'.route('examenes.delete',$query->id).'"><i class="fa fa-trash"></i></a>
+                        </div>';
+            })
+            ->addColumn('caracteristicas', function($query){
+                /* return '<a class="btn btn-success btn-sm" title="Editar Caracteristicas del Examen" href="'.route('examenes.caracteristicas',$query->id).'"><i class="fa fa-notes-medical"></i><span>Caracteristicas</span></a>'; */
+                return '<div class="btn-group" role="group" aria-label="Opciones">
+                            <a class="btn btn-success btn-sm" title="Editar Caracteristicas del Examen" href="'.route('examenes.caracteristicas',$query->id).'"><i class="fa fa-notes-medical"></i></a>
                         </div>';
             })
             ->addColumn('status', function($query){
@@ -62,7 +67,7 @@ class ExamenesDataTable extends DataTable
                 }
                 
             })
-            ->rawColumns(['status', 'action','unidad','ref_inferior','ref_superior'])
+            ->rawColumns(['status', 'action','unidad','ref_inferior','ref_superior','caracteristicas'])
             ->setRowId('id');
     }
 
@@ -129,6 +134,11 @@ class ExamenesDataTable extends DataTable
             Column::make('created_at')->title('Creado'),
             Column::make('updated_at')->title('Actualizado'),
             Column::computed('action')->title('Acción')
+                    ->exportable(false)
+                    ->printable(false)
+                    ->width(60)
+                    ->addClass('text-center'),
+            Column::computed('caracteristicas')->title('Caracteristicas')
                     ->exportable(false)
                     ->printable(false)
                     ->width(60)

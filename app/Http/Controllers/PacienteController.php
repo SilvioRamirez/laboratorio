@@ -282,7 +282,9 @@ class PacienteController extends Controller
         }
         $pdf = PDF::loadView('resultados.pdf', compact('resultado', 'paciente', 'examen', 'caracteristicas', 'configuracion'));
 
-        return $pdf->stream();
+        return $pdf->download(''.$paciente->cedula.' '.$paciente->nombres.' '.$paciente->apellidos.'.pdf');
+
+        /* return $pdf->stream(); */
     }
 
     public function paciente_resultados_cola_pdf($id){
@@ -298,13 +300,17 @@ class PacienteController extends Controller
                     }])
                     ->get();
 
+                    /* return $paciente; */
+
         $configuracion = Configuracion::first();
 
         get_defined_vars();
         
         $pdf = PDF::loadView('resultados.pdf-cola', compact('paciente', 'configuracion'));
 
-        return $pdf->stream();
+        return $pdf->download(''.$paciente[0]->cedula.' '.$paciente[0]->nombres.' '.$paciente[0]->apellidos.'.pdf');
+
+        /* return $pdf->stream(); */
     }
 
 
