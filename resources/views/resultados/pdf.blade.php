@@ -160,7 +160,7 @@
                     <td class=""><strong>PACIENTE: </strong>{{ $paciente->nombres }} {{ $paciente->apellidos }}   <strong>     FECHA DE NACIMIENTO: </strong>{{ $paciente->fechaNacimiento }}</td>
                 </tr>
                 <tr>
-                    <td class=""><strong>FECHA: </strong>{{ $examen->created_at }}   <strong>  MUESTRA: </strong>{{ $resultado->muestra->nombre }}</td>
+                    <td class=""><strong>FECHA EXAMEN: </strong>{{ $resultado->examen_fecha }}   <strong>  MUESTRA: </strong>{{ $resultado->muestra->nombre }}</td>
                 </tr>
                 <tr>
                     <td class=""></td>

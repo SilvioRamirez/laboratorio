@@ -10,7 +10,7 @@
     <h3><strong>Resultado: </strong>{{ $examen->nombre }}</h3>
     <h3><strong>Bioanalista: </strong>{{ $resultado->bioanalista->nombres }} {{ $resultado->bioanalista->apellidos }}</h3>
     <h3><strong>Muestra: </strong>{{ $resultado->muestra->nombre }}</h3>
-    <h3><strong>Fecha: </strong>{{ $examen->created_at }}</h3>
+    <h3><strong>Fecha: </strong>{{ $resultado->examen_fecha }}</h3>
     <hr>
     <h3 class="text-center"><strong>Resultados:</strong></h3>
     <hr>

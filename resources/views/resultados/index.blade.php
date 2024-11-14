@@ -41,6 +41,10 @@
                                 @endforeach
                         </select>
                 </div>
+
+                <div class="form-group required mb-3">
+                    {{ Form::dateComp('examen_fecha','Fecha del Examen', null, null, '') }}
+                </div>
                 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     {{ Form::submitComp() }}
@@ -131,5 +135,12 @@
         <a class="btn btn-danger btn" title="Eliminar cola de impresión" href="{{ route('paciente.resultados.cola.vaciar', $paciente->id) }}"><i class="fa fa-trash"></i> Eliminar Cola de Impresión</a>
     </div>
 </div>
+
+<script>
+
+    document.getElementById('examen_fecha').valueAsDate = new Date();
+
+</script>
+
 
 @endsection

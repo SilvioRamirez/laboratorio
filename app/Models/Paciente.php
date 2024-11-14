@@ -47,7 +47,7 @@ class Paciente extends Model
 
     public function getFechaNacimientoAttribute()
     {
-        return \Carbon\Carbon::parse($this->attributes['updated_at'])->format('Y-m-d');
+        return \Carbon\Carbon::parse($this->attributes['fecha_nacimiento'])->format('Y-m-d');
     }
 
     /* public function getAgeAttribute()

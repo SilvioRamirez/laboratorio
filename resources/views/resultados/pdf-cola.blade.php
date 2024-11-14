@@ -154,7 +154,7 @@
                 </div>
     
                 <div class="text-center margint-bottom-10">
-                    <strong>MUESTRA: </strong>{{ $resultado->muestra->nombre }}     <strong>FECHA: </strong>{{ $resultado->examen->created_at }}
+                    <strong>MUESTRA: </strong>{{ $resultado->muestra->nombre }}     <strong>FECHA EXAMEN: </strong>{{ $resultado->examen_fecha }}
                 </div>
                 
                 <table class="table table-border">

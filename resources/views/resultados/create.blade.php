@@ -10,7 +10,7 @@
     <h3>Examen: <strong>{{ $resultado->examen->nombre }}</strong></h3>
     <h3>Bioanalista: <strong>{{ $resultado->bioanalista->nombres }} {{ $resultado->bioanalista->apellidos }}</strong></h3>
     <h3>Muestra: <strong>{{ $resultado->muestra->nombre }} </strong></h3>
-    <h3>Fecha: <strong>{{ $resultado->created_at }} </strong></h3>
+    <h3>Fecha: <strong>{{ $resultado->examen_fecha }} </strong></h3>
     <div class="card border-light mb-3 shadow">
         <div class="card-header bg-primary text-white"><i class="fa fa-notes-medical"></i> Agregar Resultados
         </div>

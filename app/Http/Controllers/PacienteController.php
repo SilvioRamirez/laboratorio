@@ -165,6 +165,7 @@ class PacienteController extends Controller
         $resultados->bioanalista_id = $request->bioanalista_id;
         $resultados->examen_id = $request->examen_id;
         $resultados->muestra_id = $request->muestra_id;
+        $resultados->examen_fecha = $request->examen_fecha;
 
         if($resultados->save()){
             return redirect()->back()->with('success','Resultado agregado exitosamente.');
