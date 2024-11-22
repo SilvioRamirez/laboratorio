@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
             URL::forceScheme('https');
         }*/
 
-        /* view()->share('configOrganizacion', $configuracion = Configuracion::find(1)); */
+        view()->share('configOrganizacion', $configuracion = Configuracion::find(1));
 
         /* URL::forceScheme('https'); */
 
