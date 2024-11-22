@@ -13,11 +13,11 @@ class Paciente extends Model
     protected $guarded = [];
 
     static $rules= [
-        'cedula' => 'required',
+        'cedula' => '',
         'nombres' => 'required',
         'apellidos' => 'required',
-        'fecha_nacimiento' => 'required',
-        'edad' => 'required',
+        'fecha_nacimiento' => '',
+        'edad' => '',
         'sexo' => 'required',
         'telefono' => '',
         'direccion' => '',
