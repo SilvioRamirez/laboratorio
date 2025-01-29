@@ -37,7 +37,7 @@
                         
                         <div class="card-body">
                             <div class="text-center mb-4">
-                                <img src="{{ asset('storage/img/logo.png') }}" class="rounded" alt="...">
+                                <img src="{{ asset('storage/img/logo.png') }}" class="rounded" alt="Laboratorio Clinico San Benito de Palermo" height="180px">
                             </div>
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
