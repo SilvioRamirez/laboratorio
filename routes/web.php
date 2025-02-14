@@ -33,6 +33,10 @@ Route::get('/', function () {
     return view('landing.index');
 });
 
+Route::get('/ninia', function () {
+    return view('san.index');
+});
+
 // Login and Logout Routes...
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class,'login']);
